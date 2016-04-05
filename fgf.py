@@ -4,10 +4,7 @@
 import os
 import flickrapi
 import urllib2
-
-# Flickr credentials
-api_key = u'YOUR_API_KEY'
-api_secret = u'YOUR_API_SECRET'
+import credentials
 
 # Config values
 directory = 'images'
@@ -16,7 +13,7 @@ photos_per_page = 100
 
 
 def fetch_images():
-    flickr = flickrapi.FlickrAPI(api_key, api_secret, format='parsed-json')
+    flickr = flickrapi.FlickrAPI(credentials.api_key, credentials.api_secret, format='parsed-json')
     downloaded = 0
     page = 1
 

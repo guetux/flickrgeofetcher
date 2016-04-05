@@ -8,16 +8,10 @@ First, install flickrapi:
 
     pip install flickrapi
 
-Then, adapt `fgf.py` to your needs:
+Put your flickr api credentials into `credentials.py`
 
-    # Flickr credentials
     api_key = u'YOUR_API_KEY'
     api_secret = u'YOUR_API_SECRET'
-
-    # Config values
-    directory = 'images'
-    number_of_photos_to_download = 1000
-    photos_per_page = 100
     
 Finally, run that bastard:
 
