@@ -38,7 +38,7 @@ def fetch_images():
 def download(url):
     file_name = os.path.basename(url)
     file_path = os.path.join(directory, file_name)
-    request = urllib2.urlopen(url)
+    request = urllib2.urlopen(url, timeout=30)
 
     with open(file_path, "wb") as file:
         file.write(request.read())
